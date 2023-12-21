@@ -1,5 +1,23 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.funcs {
+    display: grid;
+    place-items: center;
+}
+
 .power {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: aliceblue;
+    border-radius: 25px;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.power > * {
+    margin: 0.2rem;
 }
