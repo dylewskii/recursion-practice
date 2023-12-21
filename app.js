@@ -38,3 +38,21 @@ factorialConfirm.addEventListener(("click"), () => {
     factorialAnswer.textContent = result;
 })
 
+// 2) PRODUCT OF ARRAY
+const productField = document.getElementById("product-field");
+const productConfirm = document.getElementById("product-confirm");
+const productAnswer = document.getElementById("product-answer");
+
+const productOfArray = function (arr) {
+    if (arr.length === 0) return 1;
+    
+    return arr[0] * productOfArray(arr.slice(1));
+}
+
+productConfirm.addEventListener(("click"), () => {
+    let arr = productField.value;
+    arr = arr.split(",");
+
+    const result = productOfArray(arr);
+    productAnswer.textContent = result;
+})
